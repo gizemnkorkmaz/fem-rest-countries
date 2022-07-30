@@ -1,11 +1,11 @@
 <script setup>
 import HeaderComponent from "./components/Header.vue";
-import FlagBoard from "./components/FlagBoard.vue";
+import CountryBoard from "./components/CountryBoard.vue";
 </script>
 
 <template>
   <HeaderComponent />
-  <FlagBoard />
+  <CountryBoard />
 </template>
 
 <style scoped></style>
