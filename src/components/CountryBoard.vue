@@ -1,5 +1,7 @@
 <template>
-  <section class="flex items-center justify-between px-20">
+  <section
+    class="flex flex-wrap justify-center md:justify-between items-center my-5"
+  >
     <SearchBox />
     <DropdownMenu />
   </section>
