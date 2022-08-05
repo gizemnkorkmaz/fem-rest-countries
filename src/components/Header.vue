@@ -1,6 +1,6 @@
 <template>
-  <div class="flex justify-between p-4 px-8 shadow">
-    <h1 class="font-bold">Where in the world?</h1>
+  <div class="flex justify-between p-6 px-8 shadow">
+    <h1 class="font-bold text-xl">Where in the world?</h1>
     <div>
       <ThemeSwitcher />
     </div>
