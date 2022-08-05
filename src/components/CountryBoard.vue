@@ -1,10 +1,10 @@
 <template>
-  <section class="flex items-center justify-between px-10 mx-5">
+  <section class="flex items-center justify-between px-20">
     <SearchBox />
     <DropdownMenu />
   </section>
-  <section class="flex flex-wrap">
-    <CountryBox
+  <section class="flex flex-wrap justify-center gap-20">
+    <CountryCard
       :country="country"
       v-for="country in countries"
       :key="country"
@@ -14,7 +14,7 @@
 
 <script setup>
 import SearchBox from "./SearchBox.vue";
-import CountryBox from "./CountryBox.vue";
+import CountryCard from "./CountryCard.vue";
 import DropdownMenu from "./DropdownMenu.vue";
 
 defineProps({
