@@ -9,24 +9,28 @@
       <h1 class="font-bold my-5">
         {{ country.name.common }}
       </h1>
-      <p class="font-semibold">
-        Population: <span class="font-normal">{{ country.population }}</span>
-      </p>
-      <p class="font-semibold">
-        Region: <span class="font-normal">{{ country.region }}</span>
-      </p>
-      <p class="font-semibold">
-        Capital: <span class="font-normal">{{ country.capital[0] }}</span>
+      <p
+        v-for="(detail, key) in countryDetails"
+        :key="key"
+        class="font-semibold"
+      >
+        {{ key }}: <span class="font-normal">{{ detail }}</span>
       </p>
     </div>
   </div>
 </template>
 
 <script setup>
-defineProps({
+const props = defineProps({
   country: {
     type: Object,
     required: true,
   },
 });
+
+const countryDetails = {
+  Population: props.country.population,
+  Region: props.country.region,
+  Capital: props.country.capital?.[0],
+};
 </script>
