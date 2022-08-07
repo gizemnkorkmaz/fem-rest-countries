@@ -7,6 +7,7 @@
     "preview": "vite preview --port 4173"
   },
   "dependencies": {
+    "lodash": "^4.17.21",
     "vue": "^3.2.37",
     "vue-icomoon": "^0.3.0"
   },

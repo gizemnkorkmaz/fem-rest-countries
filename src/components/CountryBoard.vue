@@ -9,16 +9,17 @@
     <CountryCard
       :country="country"
       v-for="country in orderedCountryList"
-      :key="country"
+      :key="country.name.common"
     />
   </section>
 </template>
 
 <script setup>
+import { computed } from "@vue/runtime-core";
+
 import SearchBox from "./SearchBox.vue";
 import CountryCard from "./CountryCard.vue";
 import DropdownMenu from "./DropdownMenu.vue";
-import { computed } from "@vue/runtime-core";
 
 const props = defineProps({
   countries: {
@@ -28,8 +29,8 @@ const props = defineProps({
 });
 
 const orderedCountryList = computed(() => {
-  return props.countries.sort((a, b) =>
-    a.name.common.localeCompare(b.name.common)
+  return props.countries.sort((firstCountry, secondCountry) =>
+    firstCountry.name.common.localeCompare(secondCountry.name.common)
   );
 });
 </script>

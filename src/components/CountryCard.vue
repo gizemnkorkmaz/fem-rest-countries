@@ -2,7 +2,7 @@
   <div class="pb-12 max-w-xs bg-[#FFFFFF] shadow">
     <img
       :src="country.flags.png"
-      alt="country.name.common"
+      :alt="country.name.common"
       class="max-h-40 w-[250px] min-h-[150px]"
     />
     <div class="p-4">
@@ -14,13 +14,15 @@
         :key="key"
         class="font-semibold"
       >
-        {{ key }}: <span class="font-normal">{{ detail }}</span>
+        {{ _.capitalize(key) }}: <span class="font-normal">{{ detail }}</span>
       </p>
     </div>
   </div>
 </template>
 
 <script setup>
+import _ from "lodash";
+
 const props = defineProps({
   country: {
     type: Object,
@@ -29,8 +31,8 @@ const props = defineProps({
 });
 
 const countryDetails = {
-  Population: props.country.population,
-  Region: props.country.region,
-  Capital: props.country.capital?.[0],
+  population: props.country.population,
+  region: props.country.region,
+  capital: props.country.capital?.[0],
 };
 </script>
