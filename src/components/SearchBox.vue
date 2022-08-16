@@ -9,10 +9,15 @@
       type="text"
       class="mx-4 my-12 py-3 pl-8 shadow-md rounded-sm text-sm w-72"
       placeholder="Search for a country..."
+      :value="modelValue"
+      @input="$emit('update:modelValue', $event.target.value)"
     />
   </div>
 </template>
 
 <script setup>
 import Icon from "./Icon.vue";
+
+defineProps(["modelValue"]);
+defineEmits(["update:modelValue"]);
 </script>
