@@ -3,7 +3,7 @@
     class="flex flex-wrap justify-center md:justify-between items-center my-5"
   >
     <SearchBox />
-    <DropdownMenu @update:region="regionUpdate" />
+    <DropdownMenu @change="regionUpdate" />
   </section>
   <section class="flex flex-wrap justify-center gap-20">
     <CountryCard
