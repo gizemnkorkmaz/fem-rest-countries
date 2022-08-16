@@ -2,7 +2,7 @@
   <section
     class="flex flex-wrap justify-center md:justify-between items-center my-5"
   >
-    <SearchBox v-model="searchedCountry" />
+    <SearchBox @clearSearch="clearSearch" v-model="searchedCountry" />
     <DropdownMenu @change="regionUpdate" />
   </section>
   <section class="flex flex-wrap justify-center gap-20">
@@ -33,6 +33,7 @@ const selectedRegion = ref("");
 const searchedCountry = ref("");
 
 const regionUpdate = (e) => (selectedRegion.value = e.target.value);
+const clearSearch = () => (searchedCountry.value = "");
 
 const regionalCountryList = computed(() => {
   return props.countries.filter((country) =>
