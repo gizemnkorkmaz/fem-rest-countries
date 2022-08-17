@@ -1,6 +1,6 @@
 <template>
   <select
-    class="border px-10 py-3 mx-10 my-3 rounded text-slate-600 cursor-pointer"
+    class="shadow-sm border px-5 py-3 mx-10 my-3 rounded text-slate-600 cursor-pointer sm:w-[300px] w-[280px]"
   >
     <option v-for="region in REGIONS" :key="region">{{ region }}</option>
   </select>

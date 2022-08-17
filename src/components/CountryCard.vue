@@ -3,7 +3,7 @@
     <img
       :src="country.flags.png"
       :alt="country.name.common"
-      class="max-h-40 w-[250px] min-h-[150px]"
+      class="max-h-40 sm:w-[250px] w-[320px] min-h-[150px]"
     />
     <div class="p-4">
       <h1 class="font-bold my-5">
