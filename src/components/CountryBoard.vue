@@ -5,17 +5,17 @@
     <SearchBox @clearSearch="clearSearch" v-model="searchedCountry" />
     <DropdownMenu @change="regionUpdate" />
   </section>
-  <section class="flex flex-wrap justify-center gap-20" v-if="!searchedCountry">
-    <CountryCard
-      :country="country"
-      v-for="country in selectedRegion ? regionalCountryList : countries"
-      :key="country.name.common"
-    />
-  </section>
   <section class="flex flex-wrap justify-center gap-20" v-if="searchedCountry">
     <CountryCard
       :country="country"
       v-for="country in searchedCountryList"
+      :key="country.name.common"
+    />
+  </section>
+  <section class="flex flex-wrap justify-center gap-20" v-else>
+    <CountryCard
+      :country="country"
+      v-for="country in selectedRegion ? regionalCountryList : countries"
       :key="country.name.common"
     />
   </section>
