@@ -15,7 +15,7 @@
     <Icon
       name="clear"
       :size="14"
-      class="absolute bottom-16 right-6 text-slate-400"
+      class="absolute bottom-16 right-6 text-slate-400 cursor-pointer"
       @click="$emit('clearSearch')"
     />
   </div>
