@@ -5,17 +5,12 @@
     <SearchBox @clearSearch="clearSearch" v-model="searchedCountry" />
     <DropdownMenu @change="regionUpdate" />
   </section>
-  <section class="flex flex-wrap justify-center gap-20" v-if="searchedCountry">
+  <section class="flex flex-wrap justify-center gap-20">
     <CountryCard
       :country="country"
-      v-for="country in searchedCountryList"
-      :key="country.name.common"
-    />
-  </section>
-  <section class="flex flex-wrap justify-center gap-20" v-else>
-    <CountryCard
-      :country="country"
-      v-for="country in selectedRegion ? regionalCountryList : countries"
+      v-for="country in searchedCountry
+        ? searchedCountryList
+        : regionalCountryList"
       :key="country.name.common"
     />
   </section>
@@ -36,7 +31,7 @@ const props = defineProps({
   },
 });
 
-const selectedRegion = ref("");
+const selectedRegion = ref("All");
 const searchedCountry = ref("");
 
 const regionUpdate = (e) => (selectedRegion.value = e.target.value);
@@ -51,7 +46,7 @@ const regionalCountryList = computed(() => {
 });
 
 const searchedCountryList = computed(() => {
-  return props.countries.filter((country) =>
+  return regionalCountryList.value.filter((country) =>
     country.name.common
       .toLowerCase()
       .includes(searchedCountry.value.toLowerCase())
