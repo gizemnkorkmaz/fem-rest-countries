@@ -1,5 +1,8 @@
 <template>
-  <div class="pb-12 max-w-xs bg-[#FFFFFF] shadow">
+  <div
+    class="pb-12 max-w-xs bg-[#FFFFFF] shadow cursor-pointer"
+    @click="showDetails"
+  >
     <img
       :src="country.flags.png"
       :alt="country.name.common"
@@ -35,4 +38,6 @@ const countryDetails = {
   region: props.country.region,
   capital: props.country.capital?.[0],
 };
+
+const showDetails = () => alert("details");
 </script>

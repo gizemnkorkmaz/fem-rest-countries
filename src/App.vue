@@ -1,11 +1,11 @@
 <template>
   <HeaderComponent />
-  <CountryBoard :countries="countries" />
+  <router-view />
 </template>
 
 <script setup>
 import { ref } from "@vue/reactivity";
-import { onMounted } from "@vue/runtime-core";
+import { onMounted, provide } from "@vue/runtime-core";
 
 import HeaderComponent from "./components/Header.vue";
 import CountryBoard from "./components/CountryBoard.vue";
@@ -21,6 +21,8 @@ onMounted(() => {
       );
     });
 });
+
+provide("countries", countries);
 </script>
 
 <style scoped></style>

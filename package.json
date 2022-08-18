@@ -9,7 +9,8 @@
   "dependencies": {
     "lodash": "^4.17.21",
     "vue": "^3.2.37",
-    "vue-icomoon": "^0.3.0"
+    "vue-icomoon": "^0.3.0",
+    "vue-router": "^4.1.3"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.1",
