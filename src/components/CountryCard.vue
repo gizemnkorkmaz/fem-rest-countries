@@ -25,6 +25,7 @@
 
 <script setup>
 import _ from "lodash";
+import router from "../router";
 
 const props = defineProps({
   country: {
@@ -39,5 +40,5 @@ const countryDetails = {
   capital: props.country.capital?.[0],
 };
 
-const showDetails = () => alert("details");
+const showDetails = () => router.push({ path: "/CountryDetails" });
 </script>
