@@ -1,11 +1,11 @@
 <template>
   <section
-    class="flex flex-wrap justify-center md:justify-between items-center my-5"
+    class="flex flex-wrap justify-center md:justify-between items-center py-5 dark:bg-[#202C37]"
   >
     <SearchBox @clearSearch="clearSearch" v-model="searchedCountry" />
     <DropdownMenu @change="regionUpdate" />
   </section>
-  <section class="flex flex-wrap justify-center gap-20">
+  <section class="flex flex-wrap justify-center gap-20 dark:bg-[#202C37]">
     <CountryCard
       :country="country"
       v-for="country in searchedCountry

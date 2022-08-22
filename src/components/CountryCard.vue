@@ -1,6 +1,6 @@
 <template>
   <div
-    class="pb-12 max-w-xs bg-[#FFFFFF] shadow cursor-pointer"
+    class="pb-12 max-w-xs bg-[#FFFFFF] shadow cursor-pointer dark:bg-[#2B3945] dark:text-white"
     @click="showDetails"
   >
     <img

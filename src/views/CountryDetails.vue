@@ -3,7 +3,7 @@
     @click="returnHome"
     class="w-[120px] p-3 mt-[100px] mx-16 shadow bg-white flex justify-center"
   >
-    <Icon name="arrow" size="20" class="mt-[2px]" /><span class="pl-2"
+    <Icon name="arrow" :size="20" class="mt-[2px]" /><span class="pl-2"
       >Back</span
     >
   </button>

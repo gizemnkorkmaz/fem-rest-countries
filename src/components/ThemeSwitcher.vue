@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center font-semibold">
+  <div class="flex items-center font-semibold dark:text-white">
     <icon name="dark" :size="18" class="cursor-pointer" />
     <span class="px-2 text-md">Dark Mode</span>
   </div>

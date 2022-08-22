@@ -7,7 +7,7 @@
     />
     <input
       type="text"
-      class="mx-4 my-12 py-3 pl-10 shadow-md rounded-sm text-sm sm:w-[350px] w-[320px]"
+      class="mx-4 my-12 py-3 pl-10 shadow-md rounded-sm text-sm sm:w-[350px] w-[320px] dark:bg-[#202C37] dark:text-white"
       placeholder="Search for a country..."
       :value="modelValue"
       @input="$emit('update:modelValue', $event.target.value)"
