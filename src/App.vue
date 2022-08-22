@@ -1,5 +1,5 @@
 <template>
-  <div class="dark">
+  <div :class="theme">
     <HeaderComponent />
     <router-view />
   </div>
@@ -13,6 +13,7 @@ import HeaderComponent from "./components/Header.vue";
 import CountryBoard from "./components/CountryBoard.vue";
 
 const countries = ref([]);
+const theme = ref("dark");
 
 onMounted(() => {
   fetch("https://restcountries.com/v3.1/all")
@@ -25,6 +26,7 @@ onMounted(() => {
 });
 
 provide("countries", countries);
+provide("theme", theme);
 </script>
 
 <style scoped></style>
