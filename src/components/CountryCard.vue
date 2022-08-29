@@ -1,6 +1,6 @@
 <template>
   <div
-    class="pb-12 max-w-xs bg-[#FFFFFF] shadow cursor-pointer dark:bg-[#2B3945] dark:text-white"
+    class="pb-12 max-w-xs max-h-[380px] bg-[#FFFFFF] shadow cursor-pointer dark:bg-[#2B3945] dark:text-white"
     @click="showDetails"
   >
     <img
@@ -40,5 +40,8 @@ const countryDetails = {
   capital: props.country.capital?.[0],
 };
 
-const showDetails = () => router.push({ path: "/CountryDetails" });
+const showDetails = (e) => {
+  const currentCountry = props.country.name.common.toLowerCase();
+  router.push({ path: `/${currentCountry}` });
+};
 </script>

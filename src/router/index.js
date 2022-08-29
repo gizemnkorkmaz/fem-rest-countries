@@ -5,7 +5,7 @@ import CountryDetails from "../views/CountryDetails.vue";
 const routes = [
   { path: "/", name: "Home", component: Home },
   {
-    path: "/countryDetails",
+    path: "/:countryName",
     name: "CountryDetails",
     component: CountryDetails,
   },

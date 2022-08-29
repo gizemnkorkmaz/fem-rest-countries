@@ -2,13 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 #app {
-    background-color: #FAFAFA;
-    height: 100vh;
-    margin: 0 auto;
-    font-family: 'Nunito Sans', sans-serif;
+  background-color: #fafafa;
+  height: 100vh;
+  margin: 0 auto;
+  font-family: "Nunito Sans", sans-serif;
 }

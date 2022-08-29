@@ -1,5 +1,5 @@
 <template>
-  <div :class="theme">
+  <div :class="theme" class="h-full">
     <HeaderComponent />
     <router-view />
   </div>
