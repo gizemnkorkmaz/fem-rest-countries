@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.21",
+    "lookie": "^1.0.4",
     "vue": "^3.2.37",
     "vue-icomoon": "^0.3.0",
     "vue-router": "^4.1.3"

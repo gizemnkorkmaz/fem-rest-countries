@@ -10,11 +10,14 @@
 
 <script setup>
 import { inject } from "@vue/runtime-core";
+import Lookie from "lookie";
 
 import Icon from "./Icon.vue";
 
 const theme = inject("theme");
 
-const switchTheme = () =>
-  (theme.value = theme.value === "dark" ? "light" : "dark");
+const switchTheme = () => {
+  theme.value = theme.value === "dark" ? "light" : "dark";
+  Lookie.set("theme", theme.value);
+};
 </script>

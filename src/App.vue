@@ -8,12 +8,13 @@
 <script setup>
 import { ref } from "@vue/reactivity";
 import { onMounted, provide } from "@vue/runtime-core";
+import Lookie from "lookie";
 
 import HeaderComponent from "./components/Header.vue";
 import CountryBoard from "./components/CountryBoard.vue";
 
 const countries = ref([]);
-const theme = ref("dark");
+const theme = ref(Lookie.get("theme") || "dark");
 
 onMounted(() => {
   fetch("https://restcountries.com/v3.1/all")
