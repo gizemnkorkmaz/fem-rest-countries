@@ -1,21 +1,21 @@
 <template>
   <div
-    class="pb-12 max-w-xs max-h-[380px] bg-[#FFFFFF] shadow cursor-pointer dark:bg-[#2B3945] dark:text-white"
+    class="max-h-[380px] max-w-xs cursor-pointer rounded-lg bg-[#FFFFFF] pb-12 shadow dark:bg-[#2B3945] dark:text-white"
     @click="showDetails"
   >
     <img
       :src="country.flags.png"
       :alt="country.name.common"
-      class="max-h-40 sm:w-[250px] w-[320px] min-h-[150px]"
+      class="max-h-40 min-h-[150px] w-[320px] rounded-lg sm:w-[250px]"
     />
     <div class="p-4">
-      <h1 class="font-bold my-5">
+      <h1 class="my-5 text-center font-bold">
         {{ country.name.common }}
       </h1>
       <p
         v-for="(detail, key) in countryDetails"
         :key="key"
-        class="font-semibold"
+        class="text-center font-semibold"
       >
         {{ _.capitalize(key) }}: <span class="font-normal">{{ detail }}</span>
       </p>

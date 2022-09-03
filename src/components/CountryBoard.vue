@@ -1,6 +1,6 @@
 <template>
   <section
-    class="flex flex-wrap justify-center md:justify-between items-center py-5 dark:bg-[#202C37]"
+    class="flex flex-wrap items-center justify-center py-5 dark:bg-[#202C37] md:justify-between"
   >
     <SearchBox @clearSearch="clearSearch" v-model="searchedCountry" />
     <DropdownMenu @change="regionUpdate" />

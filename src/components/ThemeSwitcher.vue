@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex items-center font-semibold dark:text-white cursor-pointer"
+    class="flex cursor-pointer items-center font-semibold dark:text-white"
     @click="switchTheme"
   >
     <icon name="dark" :size="18" v-if="theme == 'light'" />

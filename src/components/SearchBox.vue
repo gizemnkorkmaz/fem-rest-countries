@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-10 relative">
+  <div class="relative mx-10">
     <Icon
       name="search"
       :size="20"
@@ -7,7 +7,7 @@
     />
     <input
       type="text"
-      class="mx-4 my-12 py-3 pl-10 shadow-md rounded-sm text-sm sm:w-[350px] w-[320px] dark:bg-[#202C37] dark:text-white"
+      class="mx-4 my-12 w-[320px] rounded-sm py-3 pl-10 text-sm shadow-md dark:bg-[#202C37] dark:text-white sm:w-[350px]"
       placeholder="Search for a country..."
       :value="modelValue"
       @input="$emit('update:modelValue', $event.target.value)"
@@ -15,7 +15,7 @@
     <Icon
       name="clear"
       :size="18"
-      class="absolute bottom-[60px] right-6 text-slate-400 cursor-pointer"
+      class="absolute bottom-[60px] right-6 cursor-pointer text-slate-400"
       @click="$emit('clearSearch')"
     />
   </div>
