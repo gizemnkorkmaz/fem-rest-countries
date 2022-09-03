@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-10 dark:bg-[#202C37] dark:text-white">
+  <div class="dark:bg-[#202C37] dark:text-white">
     <button
       @click="returnHome"
       class="mx-16 mt-[100px] flex w-[120px] justify-center rounded bg-white p-3 shadow hover:opacity-80 dark:bg-[#2B3945] dark:text-white"
