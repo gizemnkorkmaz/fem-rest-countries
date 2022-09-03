@@ -1,5 +1,5 @@
 <template>
-  <div :class="theme" class="h-full">
+  <div :class="theme">
     <HeaderComponent />
     <router-view />
   </div>
@@ -30,4 +30,9 @@ provide("countries", countries);
 provide("theme", theme);
 </script>
 
-<style scoped></style>
+<style scoped>
+.dark {
+  height: 100vh;
+  background: #202c37;
+}
+</style>
