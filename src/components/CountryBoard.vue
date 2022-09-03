@@ -5,6 +5,14 @@
     <SearchBox @clearSearch="clearSearch" v-model="searchedCountry" />
     <DropdownMenu @change="regionUpdate" />
   </section>
+  <section
+    v-if="!regionalCountryList.length || !searchedCountryList.length"
+    class="flex justify-center p-10 dark:bg-[#202C37]"
+  >
+    <span class="text-md text-center dark:text-[#fafafa]"
+      >No countries to show</span
+    >
+  </section>
   <section class="flex flex-wrap justify-center gap-20 dark:bg-[#202C37]">
     <CountryCard
       :country="country"
@@ -46,7 +54,7 @@ const regionalCountryList = computed(() => {
 });
 
 const searchedCountryList = computed(() => {
-  const searchResults = regionalCountryList.value.filter((country) =>
+  return regionalCountryList.value.filter((country) =>
     country.name.common
       .toLowerCase()
       .includes(searchedCountry.value.toLowerCase())
