@@ -46,7 +46,7 @@ const regionalCountryList = computed(() => {
 });
 
 const searchedCountryList = computed(() => {
-  return regionalCountryList.value.filter((country) =>
+  const searchResults = regionalCountryList.value.filter((country) =>
     country.name.common
       .toLowerCase()
       .includes(searchedCountry.value.toLowerCase())
