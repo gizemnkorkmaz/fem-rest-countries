@@ -5,11 +5,11 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 #app {
-  height: 100%;
-  margin: 0 auto;
-  font-family: "Montserrat", sans-serif;
+    height: 100%;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
 }

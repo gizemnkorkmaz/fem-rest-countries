@@ -1,27 +1,27 @@
 <template>
-  <icomoon :iconSet="iconSet" v-bind="props" />
+    <icomoon :icon-set="iconSet" v-bind="props" />
 </template>
 
 <script>
-import { Icomoon } from "vue-icomoon";
-import iconSet from "./selection.json";
+import { Icomoon } from 'vue-icomoon'
+import iconSet from './selection.json'
 
 export default {
-  name: "Icon",
-  components: {
-    Icomoon,
-  },
-  props: {
-    name: {
-      type: String,
-      required: true,
+    name: 'Icon',
+    components: {
+        Icomoon,
     },
-  },
-  setup(props) {
-    return {
-      props,
-      iconSet,
-    };
-  },
-};
+    props: {
+        name: {
+            type: String,
+            required: true,
+        },
+    },
+    setup(props) {
+        return {
+            props,
+            iconSet,
+        }
+    },
+}
 </script>
