@@ -10,6 +10,10 @@ REST Countries API with color theme switcher is one of the Frontend Mentor chall
 
 ## Demo
 
+
+https://user-images.githubusercontent.com/66412137/188267761-d04bdf9f-84e6-492d-bc3d-31c36fc69753.mov
+
+
 ## Installation
 
 ```
