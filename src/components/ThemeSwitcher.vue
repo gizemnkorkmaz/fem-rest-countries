@@ -1,10 +1,10 @@
 <template>
   <div
-    class="flex cursor-pointer items-center font-semibold dark:text-white"
+    class="flex cursor-pointer items-center font-semibold hover:opacity-60 dark:text-white"
     @click="switchTheme"
   >
-    <icon name="dark" :size="18" v-if="theme == 'light'" />
-    <icon name="light" :size="18" v-if="theme == 'dark'" />
+    <icon name="dark" :size="25" v-if="theme == 'light'" />
+    <icon name="light" :size="25" v-if="theme == 'dark'" />
   </div>
 </template>
 

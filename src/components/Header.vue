@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between bg-white p-6 px-8 shadow dark:bg-[#2B3945]">
+  <div class="flex justify-between bg-white p-8 shadow dark:bg-[#2B3945]">
     <h1
       class="cursor-pointer text-xl font-bold dark:text-[#fafafa]"
       @click="returnHome"
