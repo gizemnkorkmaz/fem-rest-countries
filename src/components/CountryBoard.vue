@@ -30,6 +30,14 @@ const searchedCountryList = computed(() => {
         country.name.common.toLowerCase().includes(searchedCountry.value.toLowerCase())
     )
 })
+
+const filteredCountryList = computed(() => {
+    if (searchedCountry.value) {
+        return searchedCountryList.value
+    } else {
+        return regionalCountryList.value
+    }
+})
 </script>
 
 <template>
@@ -44,10 +52,6 @@ const searchedCountryList = computed(() => {
         <span class="text-md text-center dark:text-white">No countries to show</span>
     </section>
     <section class="flex flex-wrap justify-center gap-20 dark:bg-darker-blue">
-        <CountryCard
-            v-for="country in searchedCountry ? searchedCountryList : regionalCountryList"
-            :key="country.name.common"
-            :country="country"
-        />
+        <CountryCard v-for="country in filteredCountryList" :key="country.name.common" :country="country" />
     </section>
 </template>
